@@ -9,9 +9,14 @@ namespace MiSitioWeb.Controllers
         public IActionResult Index ()
         {
             var escuela= new Escuela();
-            escuela.AFundacion=2019;
-            escuela.EscuelaId= Guid.NewGuid().ToString();
+            escuela.AñoDeCreación=2019;
+            escuela.UniqueId= Guid.NewGuid().ToString();
             escuela.Nombre="Corex VF";
+            escuela.Pais="República Dominicana";
+            escuela.Ciudad="Barahona";
+            escuela.Dirección="C/Panchito Boche #6";
+            escuela.TipoEscuela= TiposEscuela.Secundaria;
+
             
             return View(escuela);
         }
